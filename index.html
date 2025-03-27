@@ -1,13 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PMS School</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">"
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Apply fade-in animation */
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        /* Apply slide-in animation */
+        .slide-in {
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        /* Hover effects */
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button-hover:hover {
+            transform: translateY(-5px);
+            background-color: #3b82f6;
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
-<body>
-    <h1 class="text-center text-6xl mt-24">The Police Modern School </h1>
+
+<body class="bg-blue-50 font-sans text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-blue-800 text-white py-8 fade-in">
+        <h1 class="text-center text-6xl font-bold">The Police Modern School</h1>
+        <p class="text-center text-xl mt-2">A place for shaping the future of our youth with excellence</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="my-16 px-8 fade-in">
+        <div class="text-center">
+            <h2 class="text-4xl font-semibold text-blue-700">About Our School</h2>
+            <p class="mt-4 text-xl text-gray-700 max-w-3xl mx-auto">
+                Police Modern School is dedicated to providing quality education to students from all walks of life. Our
+                mission is to nurture academic excellence, foster creativity, and instill discipline in our students. With
+                modern facilities, experienced educators, and a safe learning environment, we aim to produce leaders of tomorrow.
+            </p>
+        </div>
+    </section>
+
+    <!-- School Services Section -->
+    <section class="bg-blue-100 py-16 slide-in">
+        <div class="text-center">
+            <h2 class="text-4xl font-semibold text-blue-700">Our Services</h2>
+            <p class="mt-4 text-xl text-gray-700 max-w-2xl mx-auto">
+                We offer a range of services for students, parents, and staff to ensure smooth academic and administrative
+                management.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 px-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-briefcase text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Job Requirements</h3>
+                <p class="mt-2 text-gray-600">Upload and view job openings for teaching and non-teaching staff positions.</p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block button-hover">Upload/View Jobs</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-id-card text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Transfer Certificate (TC)</h3>
+                <p class="mt-2 text-gray-600">Apply for the Transfer Certificate (TC) for students who are leaving the school.</p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block button-hover">Apply for TC</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-file-alt text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Results</h3>
+                <p class="mt-2 text-gray-600">Check and download the latest examination results of your ward.</p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block button-hover">View Results</a>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 px-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-calendar-day text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Date Sheet</h3>
+                <p class="mt-2 text-gray-600">Download the exam date sheet to stay prepared for upcoming examinations.</p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block button-hover">View Date Sheet</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-book text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Syllabus</h3>
+                <p class="mt-2 text-gray-600">Get the syllabus for different classes to stay on top of the curriculum.</p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block button-hover">Download Syllabus</a>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-table text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Time Table</h3>
+                <p class="mt-2 text-gray-600">View and download the school time table for various classes.</p>
+                <a href="#" class="text-blue-600 hover:text-blue-800 mt-4 inline-block button-hover">Download Time Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- School Activities Section -->
+    <section class="bg-blue-200 py-16 fade-in">
+        <div class="text-center">
+            <h2 class="text-4xl font-semibold text-blue-700">School Activities</h2>
+            <p class="mt-4 text-xl text-gray-700 max-w-2xl mx-auto">
+                Our school hosts a variety of extracurricular activities to help students grow in all aspects of life.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8 px-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-football-ball text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Sports</h3>
+                <p class="mt-2 text-gray-600">Join various sports activities, from football to athletics, and stay fit!</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-music text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Music</h3>
+                <p class="mt-2 text-gray-600">Explore your musical talent through lessons and performances.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-paint-brush text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Art & Craft</h3>
+                <p class="mt-2 text-gray-600">Express your creativity through art and craft workshops.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg text-center card">
+                <i class="fas fa-theater-masks text-4xl text-blue-600"></i>
+                <h3 class="text-2xl font-semibold text-blue-800 mt-4">Drama & Theatre</h3>
+                <p class="mt-2 text-gray-600">Get involved in drama performances and hone your acting skills.</p>
+            </div>
+        </div>
+    </section>
+
 </body>
+
 </html>
